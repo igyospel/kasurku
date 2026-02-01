@@ -1,0 +1,105 @@
+.bento-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, minmax(250px, auto));
+    gap: 1.5rem;
+}
+
+.bento-item {
+    background: var(--surface-100);
+    border-radius: 24px;
+    padding: 2rem;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(0, 0, 0, 0.03);
+    box-shadow: var(--shadow-bento);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.bento-item:hover {
+    box-shadow: var(--shadow-soft);
+    transform: translateY(-5px);
+}
+
+.bento-large {
+    grid-column: span 2;
+    grid-row: span 2;
+    background: linear-gradient(135deg, #1a1a1a, #2d2d2d);
+    color: white;
+}
+
+.bento-wide {
+    grid-column: span 2;
+}
+
+.bento-icon {
+    margin-bottom: 1rem;
+    color: var(--brand-green);
+    background: var(--surface-200);
+    padding: 8px;
+    border-radius: 12px;
+    width: 48px;
+    height: 48px;
+}
+
+.bento-large .bento-icon {
+    color: #ff0000;
+    /* Authentic Red for Netflix vibe */
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.bento-content h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.bento-content p {
+    opacity: 0.8;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.bento-content-row {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+/* Item Specifics */
+.entertainment {
+    background: url('https://images.unsplash.com/photo-1574375927938-d5a98e8ffe85?q=80&w=1000&auto=format&fit=crop') center/cover;
+}
+
+.entertainment::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.3));
+}
+
+.entertainment .bento-content {
+    position: relative;
+    z-index: 2;
+}
+
+/* Responsiveness */
+@media (max-width: 900px) {
+    .bento-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+
+    .bento-large,
+    .bento-wide {
+        grid-column: span 1;
+        grid-row: span 1;
+    }
+
+    .bento-large {
+        min-height: 300px;
+    }
+}

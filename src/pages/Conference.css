@@ -1,0 +1,478 @@
+/* ... existing CSS ... */
+
+/* [PREVIOUS CSS CONTENT] - We need to append or re-write carefully. Since I can't append easily without reading first, 
+   I will provide the FULL content again but with added sections. 
+   Actually, I'll use multi_replace if I want to just APPEND. 
+   But the file is small enough to overwrite or replace safely. 
+   Let's just use the previous file content + new stuff.
+*/
+
+.conference-page {
+    padding-top: 0;
+}
+
+.conference-hero {
+    position: relative;
+    height: 60vh;
+    min-height: 500px;
+    background-image: url('https://images.unsplash.com/photo-1431540015161-0bf868a2d407?q=80&w=2074&auto=format&fit=crop');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.conference-hero .hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.conference-hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+}
+
+.conference-hero h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+    line-height: 1.1;
+}
+
+.conference-hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2.5rem;
+    opacity: 0.9;
+}
+
+.btn-book-wa {
+    display: inline-block;
+    background: var(--brand-whatsapp);
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 99px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+}
+
+.btn-book-wa:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(37, 211, 102, 0.6);
+}
+
+/* Promo Banner Section */
+.promo-section {
+    margin-top: -80px;
+    margin-bottom: 4rem;
+    position: relative;
+    z-index: 10;
+}
+
+.promo-banner {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--shadow-bento);
+    max-width: 900px;
+    margin: 0 auto;
+    position: relative;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.promo-popular-ribbon {
+    position: absolute;
+    top: 25px;
+    right: -30px;
+    background: #4caf50;
+    color: white;
+    width: 120px;
+    text-align: center;
+    transform: rotate(45deg);
+    font-weight: 700;
+    font-size: 0.8rem;
+    letter-spacing: 0.5px;
+    padding: 5px 0;
+    z-index: 20;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.promo-header {
+    background: #0d3b14;
+    color: white;
+    text-align: center;
+    padding: 2.5rem 1rem;
+    background-image: radial-gradient(circle at 10% 20%, rgba(255, 255, 255, 0.05), transparent 20%),
+        radial-gradient(circle at 90% 80%, rgba(255, 255, 255, 0.05), transparent 20%);
+}
+
+.promo-header h4 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    opacity: 0.9;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.promo-header h2 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+}
+
+.promo-body {
+    padding: 3rem 2rem;
+    text-align: center;
+}
+
+.promo-price {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+}
+
+.price-strike {
+    color: var(--text-tertiary);
+    text-decoration: line-through;
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.price-main {
+    font-size: 4rem;
+    font-weight: 800;
+    color: #8b1818;
+    line-height: 1;
+}
+
+.price-unit {
+    color: var(--text-primary);
+    font-weight: 600;
+    font-size: 1.25rem;
+}
+
+.promo-features {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto 2.5rem;
+    max-width: 400px;
+    text-align: left;
+}
+
+.promo-features li {
+    padding: 1rem 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    display: flex;
+    align-items: center;
+    color: var(--text-secondary);
+    font-size: 1.05rem;
+    gap: 12px;
+}
+
+.promo-features li:last-child {
+    border-bottom: none;
+}
+
+.check-icon {
+    color: var(--text-tertiary);
+    flex-shrink: 0;
+}
+
+.btn-promo {
+    display: inline-block;
+    background: #1a4d2e;
+    color: white;
+    padding: 1rem 3rem;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    margin-bottom: 1rem;
+}
+
+.btn-promo:hover {
+    background: #144218;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(26, 77, 46, 0.3);
+}
+
+.promo-note {
+    font-size: 0.9rem;
+    color: #4caf50;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+
+/* Features */
+.conference-features {
+    padding: 2rem 1.5rem 6rem;
+}
+
+.conf-feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.conf-card {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    box-shadow: var(--shadow-bento);
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.conf-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-soft);
+}
+
+.icon-wrapper {
+    width: 64px;
+    height: 64px;
+    background: var(--surface-200);
+    color: var(--brand-green);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+}
+
+.conf-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    color: var(--text-primary);
+}
+
+.conf-card p {
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+/* Why Choose Us */
+.why-choose-us-section {
+    padding: 4rem 1.5rem;
+    background: linear-gradient(to bottom, var(--surface-200), white);
+    border-radius: 40px;
+    margin-bottom: 4rem;
+}
+
+.why-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2.5rem;
+    margin-top: 3rem;
+}
+
+.why-item {
+    position: relative;
+    padding: 2rem;
+    transition: all 0.3s ease;
+}
+
+.why-number {
+    font-size: 4rem;
+    font-weight: 800;
+    color: rgba(31, 100, 37, 0.1);
+    position: absolute;
+    top: 0;
+    left: 1rem;
+    z-index: 0;
+    line-height: 1;
+}
+
+.why-item h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    position: relative;
+    z-index: 1;
+}
+
+.why-item p {
+    color: var(--text-secondary);
+    position: relative;
+    z-index: 1;
+}
+
+/* Testimonials */
+.conf-testimonials {
+    padding: 4rem 1.5rem 6rem;
+    text-align: center;
+}
+
+.testimonial-card {
+    background: var(--brand-green-dark);
+    color: white;
+    padding: 4rem 2rem;
+    border-radius: 30px;
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+    background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.05' fill-rule='evenodd'%3E%3Ccircle cx='3' cy='3' r='3'/%3E%3Ccircle cx='13' cy='13' r='3'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+.quote-icon {
+    font-size: 4rem;
+    line-height: 1;
+    opacity: 0.3;
+    margin-bottom: 1rem;
+}
+
+.testimonial-text {
+    font-size: 1.5rem;
+    font-style: italic;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+.testimonial-author {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.testimonial-author img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    object-fit: cover;
+}
+
+.testimonial-author h4 {
+    margin: 0;
+    font-size: 1.1rem;
+}
+
+.testimonial-author span {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+/* Visuals - Gallery Layout */
+.conf-visuals {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-bottom: 6rem;
+    height: auto;
+}
+
+.visual-block {
+    width: 100%;
+    height: 400px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.visual-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    height: 300px;
+}
+
+.visual-card {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    height: 100%;
+    box-shadow: var(--shadow-bento);
+    cursor: pointer;
+}
+
+.visual-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.visual-card:hover img {
+    transform: scale(1.05);
+}
+
+.visual-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 1.5rem;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+    color: white;
+    font-weight: 600;
+    font-size: 1.25rem;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+}
+
+.visual-card:hover .visual-caption {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+    .promo-section {
+        margin-top: -40px;
+    }
+
+    .promo-header h2 {
+        font-size: 1.8rem;
+    }
+
+    .price-main {
+        font-size: 3rem;
+    }
+
+    .conference-hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .visual-block {
+        height: 250px;
+    }
+
+    .visual-row {
+        grid-template-columns: 1fr;
+        height: auto;
+        gap: 1.5rem;
+    }
+
+    .visual-row .visual-card {
+        height: 250px;
+    }
+
+    .visual-caption {
+        opacity: 1;
+        transform: translateY(0);
+        padding: 1rem;
+        font-size: 1rem;
+    }
+
+    .testimonial-text {
+        font-size: 1.2rem;
+    }
+}

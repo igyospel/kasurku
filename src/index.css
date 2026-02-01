@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  /* Authentic Brand Colors - Preserved */
+  --brand-green: #1f6425;
+  --brand-green-dark: #144218;
+  --brand-whatsapp: #25d366;
+  --brand-red: #ff0000;
+
+  /* Modern Palette expansions */
+  --surface-100: #ffffff;
+  --surface-200: #f8faf9;
+  /* Slight green tint */
+  --surface-300: #f0f4f1;
+
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+  --text-tertiary: #94a3b8;
+
+  --accent-gradient: linear-gradient(135deg, #1f6425 0%, #2e8b35 100%);
+  --glass-border: rgba(255, 255, 255, 0.4);
+  --glass-bg: rgba(255, 255, 255, 0.7);
+
+  --shadow-soft: 0 20px 40px -10px rgba(31, 100, 37, 0.1);
+  --shadow-bento: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--surface-200);
+  background-image:
+    radial-gradient(at 100% 0%, rgba(37, 211, 102, 0.08) 0px, transparent 50%),
+    radial-gradient(at 0% 0%, rgba(31, 100, 37, 0.05) 0px, transparent 50%);
+  color: var(--text-primary);
+  overflow-x: hidden;
+}
+
+/* Modern Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--surface-200);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Typography Enhancements */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+}
+
+.section-padding {
+  padding: 120px 0;
+}
+
+@media (max-width: 768px) {
+  .section-padding {
+    padding: 80px 0;
+  }
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.display-title {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 800;
+  background: linear-gradient(to bottom, var(--brand-green-dark), var(--brand-green));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.display-subtitle {
+  text-align: center;
+  color: var(--text-secondary);
+  max-width: 600px;
+  margin: 0 auto 4rem;
+  font-size: 1.125rem;
+  line-height: 1.6;
+}
+
+/* Spacer utilities */
+.mb-lg {
+  margin-bottom: 60px;
+}
+
+.mb-md {
+  margin-bottom: 40px;
+}
+
+.mb-sm {
+  margin-bottom: 20px;
+}
